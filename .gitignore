@@ -1,0 +1,10 @@
+*.pyc
+
+*.o
+
+*.class
+*.log
+*.lock
+*.tmp
+*.DS_Store
+
