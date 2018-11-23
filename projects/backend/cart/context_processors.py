@@ -1,6 +1,8 @@
 from .models import Cart, CartItem
 from .views import _cart_id
 
+#Cart quantity count function
+
 def counter(request):
 	item_count = 0
 	if 'admin' in request.path:

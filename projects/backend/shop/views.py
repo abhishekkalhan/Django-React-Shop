@@ -14,7 +14,7 @@ def index(request):
 	text_var= 'This is my first Django web App'
 	return HttpResponse(text_var)
 
-
+#All Products
 def allProdCat(request, c_slug=None):
 	c_page = None
 	products_list = None
@@ -23,7 +23,7 @@ def allProdCat(request, c_slug=None):
 		products_list = Product.objects.filter(category=c_page,available=True)
 	else:
 		products_list = Product.objects.all().filter(available=True)
-	'''Pagination code'''
+#Pagination
 	paginator = Paginator(products_list, 6)
 	try:
 		page = int(request.GET.get('page','1'))
